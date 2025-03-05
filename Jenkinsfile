@@ -6,6 +6,8 @@ pipeline {
         }
     }
     
+    parameters { string(name: 'TAGS', defaultValue: 'staging', description: 'tags') }.
+
     stages {
         stage('installation') {
             steps {
@@ -16,7 +18,7 @@ pipeline {
 
         stage('lancer tous les tests') {
             steps {
-                sh "npx cypress run"
+                sh "npx cypress run --env grepTags=@${params.TAGS}"
             }
         }
     }

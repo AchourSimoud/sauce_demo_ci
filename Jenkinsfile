@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('installation') {
             steps {
-                sh "npm install"
-                npx "cypress install"
+                sh "npm ci"
 
             }
         }

@@ -5,7 +5,7 @@ pipeline {
             args '--entrypoint=""'
         }
     }
-
+    
     stages {
         stage('installation') {
             steps {
@@ -21,7 +21,7 @@ pipeline {
         }
     }
 
-     post{
+    post{
         always {
             echo 'Archivage des rapports...'
             archiveArtifacts artifacts: 'cypress/reports/**/*.*', fingerprint: true

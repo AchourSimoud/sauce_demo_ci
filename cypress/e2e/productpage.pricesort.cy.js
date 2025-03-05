@@ -3,7 +3,7 @@
 import loginPage from "../pages/login.page"
 import ProductsPage from "../pages/product.page"
 
-describe('Le tri des produits : Prix', () => {
+describe('Le tri des produits : Prix', { tags: '@productpage' },() => {
     
     beforeEach(() => {
     cy.visit('https://www.saucedemo.com/')

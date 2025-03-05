@@ -3,7 +3,7 @@
 import loginPage from "../pages/login.page";
 import productsPage from "../pages/product.page"; // Assurez-vous que le chemin est correct
 
-describe("Test affichage des produits", () => {
+describe("Test affichage des produits", { tags: '@affichageproduits' }, () => {
     
 
     context("Test affichage des produits", () => {

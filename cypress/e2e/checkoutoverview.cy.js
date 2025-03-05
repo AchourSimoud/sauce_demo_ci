@@ -4,7 +4,7 @@ import loginPage from "../pages/login.page";
 import ProductsPage from "../pages/product.page";
 import CartPage from "../pages/cart.page";
 import CheckoutInformationPage from "../pages/checkoutinformationpage.page";
-describe("Test dela page de paiement", () => {
+describe("Test dela page de paiement", { tags: '@checkoutoverview' },() => {
 
     beforeEach(() => {
         cy.visit("https://www.saucedemo.com");

@@ -1,7 +1,7 @@
 import loginPage from "../pages/login.page"
 import productsPage from "../pages/product.page"
 
-describe('detailles product', () => {
+describe('detailles product',{ tags: '@detaillsproduits' }, () => {
   context('success', ()=>{
     it('passes', () => {
       cy.visit('https://www.saucedemo.com/')

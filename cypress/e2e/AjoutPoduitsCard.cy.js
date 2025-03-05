@@ -5,7 +5,7 @@ import loginPage from "../pages/login.page";
 import productPage from "../pages/product.page";
 
 
-describe("Test affichage des produits ajoutés dans cart", ()=>{
+describe("Test affichage des produits ajoutés dans cart", { tags: '@panier' }, ()=>{
     
     context("Test affichage des produits ajoutés dans cart", () => {
         beforeEach(() =>{

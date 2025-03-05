@@ -6,7 +6,7 @@ pipeline {
         }
     }
     
-    parameters { string(name: 'TAGS', defaultValue: 'staging', description: 'tags') }.
+    parameters { string(name: 'TAGS', defaultValue: 'staging', description: 'tags') }
 
     stages {
         stage('installation') {

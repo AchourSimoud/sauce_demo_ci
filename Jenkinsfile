@@ -24,7 +24,7 @@ pipeline {
                     if(params.TEST_CASE != null){
                     sh "npx cypress run --env grepTags=@${params.TEST_CASE}"
                     }else{
-                        sh "batch/${params.BATCH}"
+                        sh "batch/${params.BATCH}.sh"
                     }
                 }
                 

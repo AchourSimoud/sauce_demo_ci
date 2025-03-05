@@ -26,6 +26,6 @@ pipeline {
     post{
         always {
             echo 'Archivage des rapports...'
-            junit 'cypress/results/**/*.xml'        }
+            junit 'results/**/*.xml'        }
     }
 }

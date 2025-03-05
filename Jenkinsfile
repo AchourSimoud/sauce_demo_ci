@@ -7,7 +7,8 @@ pipeline {
     }
 
     parameters { string(name: 'TEST_CASE', defaultValue: 'staging', description: 'tags') 
-    string(name: 'TAGS', defaultValue: 'staging', description: 'tags') }
+    string(name: 'BATCH', defaultValue: 'staging', description: 'BATCH')
+    }
     
     stages {
         stage('installation') {
@@ -23,7 +24,7 @@ pipeline {
                     if(params.TEST_CASE != null){
                     sh "npx cypress run --env grepTags=@${params.TEST_CASE}"
                     }else{
-                        sh "npx cypress run --env grepTags=@${params.TAGS}"
+                        sh "batch/${params.BATCH}"
                     }
                 }
                 

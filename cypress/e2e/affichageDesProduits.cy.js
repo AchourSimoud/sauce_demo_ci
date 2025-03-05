@@ -6,7 +6,7 @@ import productsPage from "../pages/product.page"; // Assurez-vous que le chemin 
 describe("Test affichage des produits", { tags: '@affichageproduits' }, () => {
     
 
-    context("Test affichage des produits", () => {
+    context("Test affichage des produits", { tags: '@tc-002' },() => {
         beforeEach(() => {
             cy.visit("https://www.saucedemo.com/");
             loginPage.login("standard_user", "secret_sauce");

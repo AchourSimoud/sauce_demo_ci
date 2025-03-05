@@ -22,19 +22,19 @@ describe("Test dela page de paiement", { tags: '@checkoutoverview' },() => {
         cy.url().should("include", "/checkout-step-two.html"); 
     });
 
-    it("Vérifier que le prix total est visible", () => {
+    it("Vérifier que le prix total est visible", { tags: '@tc-004' },() => {
         CheckoutOverviewPage.verifierleprix();
         cy.get(".summary_subtotal_label").should("exist");
         cy.get(".summary_total_label").should("exist");
     });
 
-    it("Finaliser l'achat", () => {
+    it("Finaliser l'achat", { tags: '@tc-005' },() => {
         CheckoutOverviewPage.cliquersurleButtonfinish();
         cy.url().should("include", "/checkout-complete.html");
         cy.get(".complete-header").should("have.text", "Thank you for your order!");
     });
 
-    it("Annuler l'achat", () => {
+    it("Annuler l'achat", { tags: '@tc-006' },() => {
         CheckoutOverviewPage.cliquersurleButtoncancel();
         cy.url().should("include", "/inventory.html");
         cy.get(".title").should("have.text", "Products");

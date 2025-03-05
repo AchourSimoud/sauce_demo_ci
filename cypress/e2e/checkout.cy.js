@@ -9,7 +9,7 @@ import CheckoutOvervieuwPage from "../pages/CheckoutOvervieuw.page"
 
 describe("checkout", { tags: '@checkout' },() => {
 
-    it("checkout", () => {
+    it("checkout",{ tags: '@tc-003' }, () => {
         cy.visit('https://www.saucedemo.com/')
         loginPage.login("standard_user", "secret_sauce")
 

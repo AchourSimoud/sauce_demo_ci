@@ -14,7 +14,7 @@ describe("Test Tri", { tags: '@tri' },() => {
         cy.url().should("include", "/inventory.html");
     });
 
-    it("Tri Alphabétique A-Z", () => {
+    it("Tri Alphabétique A-Z",{ tags: '@tc-013' }, () => {
         let produitNonTrier = [];
 
         productPage.elements.productTitle()

@@ -13,7 +13,7 @@ describe("Test affichage des produits ajoutés dans cart", { tags: '@panier' }, 
             loginPage.login("standard_user", "secret_sauce");
         });
 
-        it("Ajouter des produits et vérifier s'ils sont ajoutés dans card", () => {
+        it("Ajouter des produits et vérifier s'ils sont ajoutés dans card", { tags: '@tc-001' }, () => {
             // ajouter n produits
             let nombreProduits = 4
             let listeProduits =[]

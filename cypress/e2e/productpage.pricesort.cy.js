@@ -10,7 +10,7 @@ describe('Le tri des produits : Prix', { tags: '@productpage' },() => {
     loginPage.login('standard_user', 'secret_sauce')
     })
 
-    context('Page des produits : tri par prix ', () => {
+    context('Page des produits : tri par prix ', { tags: '@tc-011' },() => {
         it("Tri par prix croissant", () => {
             let prixNonTries = [];
         
@@ -30,7 +30,7 @@ describe('Le tri des produits : Prix', { tags: '@productpage' },() => {
         });
         
 
-        it('trier par prix décroissant', () => {
+        it('trier par prix décroissant', { tags: '@tc-012' },() => {
             let prixNonTries = [];
             ProductsPage.elements.productPrice()
                 .then((elements) => {

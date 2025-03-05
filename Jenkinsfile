@@ -5,9 +5,10 @@ pipeline {
             args '--entrypoint=""'
         }
     }
-    
-    parameters { string(name: 'TAGS', defaultValue: 'staging', description: 'tags') }
 
+    parameters { string(name: 'TEST_CASE', defaultValue: 'staging', description: 'tags') }
+    parameters { string(name: 'TAGS', defaultValue: 'staging', description: 'tags') }
+    
     stages {
         stage('installation') {
             steps {
@@ -18,7 +19,14 @@ pipeline {
 
         stage('lancer tous les tests') {
             steps {
-                sh "npx cypress run --env grepTags=@${params.TAGS}"
+                script{
+                    if(params.TEST_CASE != null){
+                    sh "npx cypress run --env grepTags=@${params.TEST_CASE}"
+                    }else{
+                        sh "npx cypress run --env grepTags=@${params.TAGS}"
+                    }
+                }
+                
             }
         }
     }

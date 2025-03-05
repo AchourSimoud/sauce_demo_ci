@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.247" tests="2" failures="0" skipped="2">
+  <testsuite name="Root Suite" timestamp="2025-03-05T12:16:36" tests="0" file="cypress/e2e/tri_az.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Tri" timestamp="2025-03-05T12:16:36" tests="2" time="0.183" failures="0">
+  </testsuite>
+</testsuites>

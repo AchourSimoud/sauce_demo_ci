@@ -26,7 +26,7 @@ pipeline {
     post{
         always {
             echo 'Archivage des rapports...'
-            archiveArtifacts artifacts: 'cypress/reports/**/*.*', fingerprint: true
+            archiveArtifacts artifacts: 'cypress/results/**/*.*', fingerprint: true
         }
     }
 }

@@ -12,5 +12,11 @@ pipeline {
                 sh "npm install"
             }
         }
+
+        stage('lancer tous les tests') {
+            steps {
+                sh "npx cypress run"
+            }
+        }
     }
 }

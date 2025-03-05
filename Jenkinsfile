@@ -26,7 +26,6 @@ pipeline {
     post{
         always {
             echo 'Archivage des rapports...'
-            archiveArtifacts artifacts: 'cypress/results/**/*.*', fingerprint: true
-        }
+            junit 'cypress/results/**/*.xml'        }
     }
 }
